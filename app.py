@@ -11,7 +11,7 @@ app = Flask(__name__)
 # run_with_ngrok(app)
 CORS(app, origins=["http://localhost:3000"])
 model = load_model("sudeep.h5")
-mongo_client=MongoClient("mongodb://localhost:27017/")
+mongo_client=MongoClient("mongodb://hellokcr:Konepalli@ac-ts0ftlx-shard-00-00.hpocola.mongodb.net:27017,ac-ts0ftlx-shard-00-01.hpocola.mongodb.net:27017,ac-ts0ftlx-shard-00-02.hpocola.mongodb.net:27017/?ssl=true&replicaSet=atlas-zgec31-shard-0&authSource=admin&retryWrites=true&w=majority")
 
 db = mongo_client['test']
 collection = db['cellimages']
