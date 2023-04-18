@@ -11,7 +11,7 @@ app = Flask(__name__)
 # run_with_ngrok(app)
 CORS(app, origins=["http://localhost:3000"])
 model = load_model("sudeep.h5")
-mongo_client = MongoClient("mongodb+srv://21bd1a0535cseb:hdut8rhUXqp068Yc@cluster0.t1lezom.mongodb.net/?retryWrites=true&w=majority")
+mongo_client=MongoClient("mongodb://localhost:27017/")
 
 db = mongo_client['test']
 collection = db['cellimages']
