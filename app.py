@@ -9,7 +9,7 @@ import base64
 from pymongo import MongoClient
 app = Flask(__name__)
 # run_with_ngrok(app)
-CORS(app, origins=["http://localhost:3001"])
+CORS(app, origins=["http://localhost:3000"])
 model = load_model("sudeep.h5")
 mongo_client = MongoClient("mongodb+srv://21bd1a0535cseb:hdut8rhUXqp068Yc@cluster0.t1lezom.mongodb.net/?retryWrites=true&w=majority")
 
